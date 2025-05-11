@@ -36,8 +36,10 @@
 >postgres:14
 ![image](https://github.com/user-attachments/assets/85d54ce9-9f7a-43de-9a62-5a053100ed03)
 
+
 проверка версии
 ![image](https://github.com/user-attachments/assets/bcddf793-f9ac-4104-b08e-96066efafdf0)
+
 ![image](https://github.com/user-attachments/assets/d38a39c5-d706-4a4c-822b-2f6bfb10e264)
 
 проверка /var/lib/postgres
