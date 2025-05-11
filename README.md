@@ -8,7 +8,7 @@
 
 
 ## (2) Установите Docker Engine. ##
-Выполнил инсталляцию Docker Engine по официальному документу [Install using the apt repository|https://docs.docker.com/engine/install/ubuntu/]
+Выполнил инсталляцию Docker Engine по официальному документу [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/)
 ![image](https://github.com/user-attachments/assets/23e4edf9-764e-4a77-84cb-e7c8c5b94747)
 
 
