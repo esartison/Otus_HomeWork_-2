@@ -101,6 +101,7 @@
 
 проверка из PGSERVER
 >docker exec -it pgserver bash
+
 ![image](https://github.com/user-attachments/assets/1f89a306-e715-4566-b84a-c26e1c2b7f27)
 
    
