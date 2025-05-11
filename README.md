@@ -111,5 +111,22 @@
 
 
 ## (8) Удалите контейнер с сервером и создайте его заново. ##
+Удалил контейнер pgserver
+![image](https://github.com/user-attachments/assets/b731f7af-d344-4bfd-b3ee-9f3e59aaccb6)
+
+Пересоздал его
+>docker container run \
+>--name pgserver \
+>--network db \
+>-e POSTGRES_PASSWORD=5af45Q4ae3Xa3Ff4 \
+>-e PGDATA=/var/lib/postgres/pgdata \
+>-v /var/lib/postgres:/var/lib/postgres \
+>-p 5432:5432  \
+>postgres:14
+![image](https://github.com/user-attachments/assets/135055d0-968c-418a-9b9e-6d7b32f7f790)
+
 
 ## (9) Проверьте, что данные остались на месте. ##
+Данные на месте
+![image](https://github.com/user-attachments/assets/40414785-c68c-450d-8e09-c78b1a3be61b)
+
