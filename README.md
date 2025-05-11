@@ -43,12 +43,15 @@
 ![image](https://github.com/user-attachments/assets/bcddf793-f9ac-4104-b08e-96066efafdf0)
 ![image](https://github.com/user-attachments/assets/d38a39c5-d706-4a4c-822b-2f6bfb10e264)
 
-проверка /var/lib/postgres
+проверка /var/lib/postgres, локально на VM директория содержит данные от Postgres базы в Docker
+![image](https://github.com/user-attachments/assets/b746756b-6fb8-439f-8b98-495941cf6acf)
 
 
 
 
 ## (5) Разверните контейнер с клиентом PostgreSQL. ##
+
+
 
 ## (6) Подключитесь из контейнера с клиентом к контейнеру с сервером и создайте таблицу с данными о перевозках. ##
 
