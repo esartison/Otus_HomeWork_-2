@@ -50,7 +50,15 @@
 
 
 ## (5) Разверните контейнер с клиентом PostgreSQL. ##
+В [PostgreSQL Docker client-only Image](https://datmt.com/backend/quering-postgresql-with-docker/) нашел образ(image) включающий в себя только psql(клиент)
 
+выполнил установку
+>docker run -dit --network=db --name=pgclient codingpuss/postgres-client
+![image](https://github.com/user-attachments/assets/88c022fa-683c-4d61-96e9-6babd5fad9a2)
+
+проверка подключения
+>docker exec -it pgclient psql postgresql://postgres:5af45Q4ae3Xa3Ff4@pgserver:5432/postgres -c 'select inet_server_addr();'
+![image](https://github.com/user-attachments/assets/ce6bb8d6-0bdd-406c-b214-3f489a0ae021)
 
 
 ## (6) Подключитесь из контейнера с клиентом к контейнеру с сервером и создайте таблицу с данными о перевозках. ##
