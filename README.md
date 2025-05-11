@@ -9,15 +9,40 @@
 
 ## (2) Установите Docker Engine. ##
 Выполнил инсталляцию Docker Engine по официальному документу [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/)
-![image width="300" height="300"](https://github.com/user-attachments/assets/23e4edf9-764e-4a77-84cb-e7c8c5b94747)
+![image](https://github.com/user-attachments/assets/23e4edf9-764e-4a77-84cb-e7c8c5b94747)
 
+Проверка Docker-а прошла успешно
+![image](https://github.com/user-attachments/assets/4f512a63-3628-490c-8ae5-9215f493093b)
 
 
 
 ## (3) Создайте каталог /var/lib/postgres для хранения данных. ##
+![image](https://github.com/user-attachments/assets/27d4c310-ce5c-4917-a989-76756838a9ae)
+
 
 
 ## (4) Разверните контейнер с PostgreSQL 14, смонтировав в него /var/lib/postgres. ##
+
+создадим сеть, так-как потребуется взаимодействие с контейнером для pg клиента
+![image](https://github.com/user-attachments/assets/a5155ca2-6266-4640-92f7-9de98d5cb7cd)
+
+Запустим сам контейнер
+>docker container run \
+>--name pgserver \
+>--network db \
+>-e POSTGRES_PASSWORD=5af45Q4ae3Xa3Ff4 \
+>-e PGDATA=/var/lib/postgres/pgdata \
+>-v /var/lib/postgres:/var/lib/postgres \
+>postgres:14
+![image](https://github.com/user-attachments/assets/85d54ce9-9f7a-43de-9a62-5a053100ed03)
+
+проверка версии
+![image](https://github.com/user-attachments/assets/bcddf793-f9ac-4104-b08e-96066efafdf0)
+![image](https://github.com/user-attachments/assets/d38a39c5-d706-4a4c-822b-2f6bfb10e264)
+
+проверка /var/lib/postgres
+
+
 
 
 ## (5) Разверните контейнер с клиентом PostgreSQL. ##
