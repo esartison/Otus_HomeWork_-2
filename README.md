@@ -34,6 +34,7 @@
 >-e POSTGRES_PASSWORD=5af45Q4ae3Xa3Ff4 \
 >-e PGDATA=/var/lib/postgres/pgdata \
 >-v /var/lib/postgres:/var/lib/postgres \
+>-p 5432:5432  \
 >postgres:14
 ![image](https://github.com/user-attachments/assets/85d54ce9-9f7a-43de-9a62-5a053100ed03)
 
@@ -59,6 +60,10 @@
 проверка подключения
 >docker exec -it pgclient psql postgresql://postgres:5af45Q4ae3Xa3Ff4@pgserver:5432/postgres -c 'select inet_server_addr();'
 ![image](https://github.com/user-attachments/assets/ce6bb8d6-0bdd-406c-b214-3f489a0ae021)
+
+Как альтернативный вариант, можно было поднять контрейнер с голой UBUNTU и установить там клиента через
+>sudo apt-get install -y postgresql-client
+Решил попробовать более сложный путь. 
 
 
 ## (6) Подключитесь из контейнера с клиентом к контейнеру с сервером и создайте таблицу с данными о перевозках. ##
@@ -86,8 +91,23 @@
    >insert into shipments(product_name, quantity, destination) values('sugar', 600, 'Africa');
    
    >insert into shipments(product_name, quantity, destination) values('sugar', 400, 'USA');
+
+Выполнил создание таблицы и вставку из под клиента
+![image](https://github.com/user-attachments/assets/55cbcb64-0d03-495b-82ed-a09d52a50381)
+
+проверка из PGCLIENT
+![image](https://github.com/user-attachments/assets/8a10f20f-1a16-488d-89df-5b1eb6f8e985)
+
+
+проверка из PGSERVER
+>docker exec -it pgserver bash
+![image](https://github.com/user-attachments/assets/1f89a306-e715-4566-b84a-c26e1c2b7f27)
+
    
 ## (7) Подключитесь к контейнеру с сервером с ноутбука или компьютера. ##
+Подключился успешно
+![image](https://github.com/user-attachments/assets/0938f8a0-809f-4c38-9382-a72313a9eadf)
+![image](https://github.com/user-attachments/assets/4321c004-3b77-45c9-9ee6-6cd7b07d7e70)
 
 
 ## (8) Удалите контейнер с сервером и создайте его заново. ##
