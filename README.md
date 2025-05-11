@@ -4,20 +4,21 @@
 
 ## (1) Создайте инстанс с Ubuntu 20.04 в Яндекс.Облаке или аналогах. ##
 В YC создал VM под управлением Ubuntu 20.04
-![image](https://github.com/user-attachments/assets/e85a0ef2-c775-46fc-8922-1e1f72fefe61)
+                   ![image](https://github.com/user-attachments/assets/e85a0ef2-c775-46fc-8922-1e1f72fefe61)
 
 
 ## (2) Установите Docker Engine. ##
 Выполнил инсталляцию Docker Engine по официальному документу [Install using the apt repository](https://docs.docker.com/engine/install/ubuntu/)
-![image](https://github.com/user-attachments/assets/23e4edf9-764e-4a77-84cb-e7c8c5b94747)
+                   ![image](https://github.com/user-attachments/assets/23e4edf9-764e-4a77-84cb-e7c8c5b94747)
 
 Проверка Docker-а прошла успешно
-![image](https://github.com/user-attachments/assets/4f512a63-3628-490c-8ae5-9215f493093b)
+
+                   ![image](https://github.com/user-attachments/assets/4f512a63-3628-490c-8ae5-9215f493093b)
 
 
 
 ## (3) Создайте каталог /var/lib/postgres для хранения данных. ##
-![image](https://github.com/user-attachments/assets/27d4c310-ce5c-4917-a989-76756838a9ae)
+                   ![image](https://github.com/user-attachments/assets/27d4c310-ce5c-4917-a989-76756838a9ae)
 
 
 
